@@ -1,0 +1,96 @@
+:root {
+  --dark-blue: hsl(218, 23%, 16%);
+  --gray-blue: hsl(217, 19%, 24%);
+  --light-blue: hsl(217, 19%, 38%);
+  --neon-green: hsl(150, 100%, 66%);
+  --light-cyan: hsl(193, 38%, 86%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--dark-blue);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background: var(--gray-blue);
+  border-radius: 10px;
+  box-shadow: 2px 2px 25px 2px hsl(218deg 23% 9% / 40%);
+  margin: 0 auto;
+  margin-top: 30vh;
+  max-width: 50rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.advice-header {
+  align-self: center;
+  font: inherit;
+  font-weight: 500;
+  color: var(--neon-green);
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.advice {
+  font-size: 2.4rem;
+  color: var(--light-cyan);
+  text-align: center;
+  font-weight: 600;
+  padding: 2.4rem;
+}
+
+.svg {
+  align-self: center;
+  margin-bottom: 2.4rem;
+}
+
+.btn {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-out;
+}
+
+.btn::before {
+  content: "";
+  background: var(--neon-green);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn:hover {
+  box-shadow: 0 0 30px 6px var(--neon-green);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
